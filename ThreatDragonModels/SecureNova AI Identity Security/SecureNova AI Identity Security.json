@@ -95,12 +95,12 @@
           },
           {
             "position": {
-              "x": 746,
-              "y": -150.00000000000244
+              "x": 745.9999999999991,
+              "y": -150.00000000000074
             },
             "size": {
               "width": 1500,
-              "height": 660
+              "height": 780
             },
             "attrs": {
               "label": {
@@ -124,8 +124,6 @@
                 "6de4e2b4-273e-4cda-a70f-221efbc23ff4",
                 "d5d586ea-6f4d-417d-bba2-3984275da4c3",
                 "c8cf615f-9211-49ea-b0e7-089ca59aae4c",
-                "9ae9799d-798e-48c1-8ecf-f07fcf5bc75e",
-                "f7aeaf58-8001-4e63-b7fd-57aba4cb92a4",
                 "205c4a99-ecbf-40ee-bf46-53682a1676de",
                 "8d4b6d82-56f4-481f-be14-bd03e112f20c",
                 "902667e6-3b61-4f4a-9995-60c193e791a4",
@@ -138,6 +136,7 @@
                 "a63e1aa5-1c45-4ddb-a90e-30423c23bc28",
                 "40030503-2ba9-4b0e-a7f0-66d733397945",
                 "923499b2-1538-4bfe-add6-ab81284a962c",
+                "67b0c1b0-6553-481a-903a-e7922f017607",
                 "b017da85-95e3-4dcd-a9ae-882b873e9f9b",
                 "c5b1606b-ca9d-416d-8d88-ae02c63d10de",
                 "ce910868-26d6-4a60-a18f-1cc2e1d6730a",
@@ -1180,9 +1179,7 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": [
-                "7178f7fa-2df5-41ed-b1f0-b7baca5a7682"
-              ]
+              "trustBoundaryIds": []
             },
             "labels": [
               "10. M2M"
@@ -1368,9 +1365,7 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": [
-                "7178f7fa-2df5-41ed-b1f0-b7baca5a7682"
-              ]
+              "trustBoundaryIds": []
             },
             "labels": [
               "11. M2M Token\n(Scoped Access)"
@@ -1484,7 +1479,13 @@
             "target": {
               "cell": "c5b1606b-ca9d-416d-8d88-ae02c63d10de",
               "port": "399fe65c-a227-4eb4-bd0a-e7906a8ff822"
-            }
+            },
+            "vertices": [
+              {
+                "x": 1470,
+                "y": 140
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -2654,8 +2655,8 @@
                 "text": "API Gateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2752,12 +2753,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "1e27feaf-9e76-480b-881c-795815592fbc",
+                  "title": "Agent Identity Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker may impersonate the legitimate AI agent by using stolen or forged credentials or an non- validated token",
+                  "mitigation": "Validate token signature, issuer, audience, expiry and required identity claims. Use short-lived credentials and secure workload identity",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "0622a449-b89b-4911-9597-1ff9f8d9ad0b",
+                  "title": "Sensitive Data Exposure",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "An attacker may exploit an insecure agent to API communication flow to obtain sensitive customer information or confidential API responses.",
+                  "mitigation": "Enforce TLS, least-privilege scopes, authorization checks and sensitive-data filtering",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "e7f87aa2-cecf-4e78-8054-27f261ce6273",
+                  "title": "Excessive Agent API Privileges",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "The AI Agent may use excessive permissions or improperly validated scopes to perform unauthorized operations on internal API's",
+                  "mitigation": "Implement RBAC, least privilege, resource-level authorization and explicit approval for sensitive actions",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -3482,6 +3531,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 6
   }
 }
