@@ -95,12 +95,12 @@
           },
           {
             "position": {
-              "x": 736.0000000000005,
-              "y": -309.9999999999998
+              "x": 746,
+              "y": -150.00000000000244
             },
             "size": {
               "width": 1500,
-              "height": 950
+              "height": 660
             },
             "attrs": {
               "label": {
@@ -119,25 +119,25 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "f6532cd4-700d-4666-8a4d-c66e6f62282a",
-                "7cad80eb-011c-4e75-aee6-4d45798cd206",
                 "ccd64501-c973-4270-b1c4-011ed4df31a0",
                 "d26b7643-ee07-46cc-a001-1920bb1c0f8e",
                 "6de4e2b4-273e-4cda-a70f-221efbc23ff4",
                 "d5d586ea-6f4d-417d-bba2-3984275da4c3",
                 "c8cf615f-9211-49ea-b0e7-089ca59aae4c",
+                "9ae9799d-798e-48c1-8ecf-f07fcf5bc75e",
+                "f7aeaf58-8001-4e63-b7fd-57aba4cb92a4",
                 "205c4a99-ecbf-40ee-bf46-53682a1676de",
                 "8d4b6d82-56f4-481f-be14-bd03e112f20c",
-                "902667e6-3b61-4f4a-9995-60c193e791a4"
+                "902667e6-3b61-4f4a-9995-60c193e791a4",
+                "7cad80eb-011c-4e75-aee6-4d45798cd206"
               ],
               "containedElements": [
                 "3cf97eba-dda1-44db-aa76-6cf6f3438dd6",
                 "27c68804-0f0e-4328-b82f-d33e2d1ba645",
-                "5ddd4024-b511-4a1c-9ef9-86235ea7a228",
                 "392d40b1-4a0d-4c7f-a146-436726c61ceb",
                 "a63e1aa5-1c45-4ddb-a90e-30423c23bc28",
                 "40030503-2ba9-4b0e-a7f0-66d733397945",
                 "923499b2-1538-4bfe-add6-ab81284a962c",
-                "67b0c1b0-6553-481a-903a-e7922f017607",
                 "b017da85-95e3-4dcd-a9ae-882b873e9f9b",
                 "c5b1606b-ca9d-416d-8d88-ae02c63d10de",
                 "ce910868-26d6-4a60-a18f-1cc2e1d6730a",
@@ -923,54 +923,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "4. LLM Request\n(Prompt + Context)",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "7178f7fa-2df5-41ed-b1f0-b7baca5a7682"
-              ]
-            },
-            "labels": [
-              "4. LLM Request\n(Prompt + Context)"
-            ],
-            "id": "7cad80eb-011c-4e75-aee6-4d45798cd206",
-            "source": {
-              "x": 908,
-              "y": -25
-            },
-            "target": {
-              "cell": "5ddd4024-b511-4a1c-9ef9-86235ea7a228",
-              "port": "3907a4b1-db18-4573-b802-5d8d89187c53"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "5. Retrieval Request",
               "description": "",
               "outOfScope": false,
@@ -1228,7 +1180,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "7178f7fa-2df5-41ed-b1f0-b7baca5a7682"
+              ]
             },
             "labels": [
               "10. M2M"
@@ -1414,7 +1368,9 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "7178f7fa-2df5-41ed-b1f0-b7baca5a7682"
+              ]
             },
             "labels": [
               "11. M2M Token\n(Scoped Access)"
@@ -1675,6 +1631,54 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "4. LLM Request\n(Prompt + Context)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "7178f7fa-2df5-41ed-b1f0-b7baca5a7682"
+              ]
+            },
+            "labels": [
+              "4. LLM Request\n(Prompt + Context)"
+            ],
+            "id": "7cad80eb-011c-4e75-aee6-4d45798cd206",
+            "source": {
+              "cell": "27c68804-0f0e-4328-b82f-d33e2d1ba645",
+              "port": "8f0d9c61-0adc-45df-b343-38530d6a552f"
+            },
+            "target": {
+              "cell": "5ddd4024-b511-4a1c-9ef9-86235ea7a228",
+              "port": "3907a4b1-db18-4573-b802-5d8d89187c53"
+            }
+          },
+          {
             "position": {
               "x": 810,
               "y": -79.99999999999963
@@ -1796,8 +1800,8 @@
           },
           {
             "position": {
-              "x": 1100,
-              "y": -230
+              "x": 1115,
+              "y": -280
             },
             "size": {
               "width": 180,
